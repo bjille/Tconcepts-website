@@ -23,7 +23,7 @@ https://www.tooplate.com/view/2117-infinite-loop
   <!-- Hero section -->
   <section id="infinite" class="text-white tm-font-big tm-parallax">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+    <nav class="navbar navbar-expand-md tm-navbar scroll" id="tmNav">
       <div class="container">
         <div class="tm-next">
           <a href="#infinite" class="navbar-brand"><img src="./img/tconcepts-logo.png" alt="" width="230"
@@ -533,10 +533,10 @@ https://www.tooplate.com/view/2117-infinite-loop
 
       // Detect window scroll and update navbar
       $(window).scroll(function (e) {
-        if ($(document).scrollTop() > 120) {
-          $('.tm-navbar').addClass("scroll");
+        if ($(document).scrollTop() > 0) {
+          // $('.tm-navbar').addClass("scroll");
         } else {
-          $('.tm-navbar').removeClass("scroll");
+          // $('.tm-navbar').removeClass("scroll");
         }
       });
 
