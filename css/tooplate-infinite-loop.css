@@ -81,7 +81,7 @@ blockquote {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background-color: transparent;
+  background-color: white;
   transition: all 0.3s ease;
 }
 
@@ -110,7 +110,7 @@ blockquote {
 }
 
 .tm-nav-link {
-  color: white;
+  /* color: white; */
 }
 
 .tm-navbar.scroll .tm-nav-link {
