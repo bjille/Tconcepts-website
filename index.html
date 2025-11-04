@@ -438,11 +438,14 @@ https://www.tooplate.com/view/2117-infinite-loop
         </div>
 
         <div class="col-sm-12 col-md-6">
-          <form action="" method="get">
-            <input id="name" name="name" type="text" placeholder="Naam" class="tm-input" required />
-            <input id="email" name="email" type="email" placeholder="Email" class="tm-input" required />
+          <!-- <form id="contactform" action="http://localhost:3000/submit" method="POST"> -->
+          <form id="contactform" action="https://jsformhandler.onrender.com/submit" method="POST">
+
+            <input id="name" name="name" type="text" placeholder="Naam" class="tm-input" required value="test" />
+            <input id="email" name="email" type="email" placeholder="Email" class="tm-input" required
+              value="test@test.com" />
             <textarea id="message" name="message" rows="8" placeholder="Bericht" class="tm-input" required></textarea>
-            <button type="submit" class="btn tm-btn-submit">Submit</button>
+            <button type="submit" class="btn tm-btn-submit">Versturen</button>
           </form>
         </div>
 
@@ -510,6 +513,17 @@ https://www.tooplate.com/view/2117-infinite-loop
   </script>
 
   <script>
+
+    if (window.URLSearchParams) {
+      const params = new URLSearchParams(window.location.search);
+      console.log(params.get('submitted'));
+      if (params.get('submitted') === 'true') {
+        // alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
+        var formulier = document.getElementById('contactform');
+        formulier.reset();
+        formulier.appendChild(document.createElement('div')).innerHTML = '<p>Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.</p>';
+      }
+    }
 
 
     function getOffSet() {
